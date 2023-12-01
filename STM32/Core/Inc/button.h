@@ -21,6 +21,7 @@ int isButton2Pressed();
 
 int isButton3Pressed();
 
+int isButton4Pressed();
 void getKeyInput();
 
 

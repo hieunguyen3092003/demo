@@ -8,6 +8,7 @@ C_SRCS += \
 ../Core/Src/FSMLightModification.c \
 ../Core/Src/FSMModificationMode.c \
 ../Core/Src/FSMNormalMode.c \
+../Core/Src/FSMPedestrianMode.c \
 ../Core/Src/UART.c \
 ../Core/Src/button.c \
 ../Core/Src/global.c \
@@ -24,6 +25,7 @@ OBJS += \
 ./Core/Src/FSMLightModification.o \
 ./Core/Src/FSMModificationMode.o \
 ./Core/Src/FSMNormalMode.o \
+./Core/Src/FSMPedestrianMode.o \
 ./Core/Src/UART.o \
 ./Core/Src/button.o \
 ./Core/Src/global.o \
@@ -40,6 +42,7 @@ C_DEPS += \
 ./Core/Src/FSMLightModification.d \
 ./Core/Src/FSMModificationMode.d \
 ./Core/Src/FSMNormalMode.d \
+./Core/Src/FSMPedestrianMode.d \
 ./Core/Src/UART.d \
 ./Core/Src/button.d \
 ./Core/Src/global.d \

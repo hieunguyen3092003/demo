@@ -1,6 +1,7 @@
 "./Core/Src/FSMLightModification.o"
 "./Core/Src/FSMModificationMode.o"
 "./Core/Src/FSMNormalMode.o"
+"./Core/Src/FSMPedestrianMode.o"
 "./Core/Src/UART.o"
 "./Core/Src/button.o"
 "./Core/Src/global.o"
