@@ -6,7 +6,6 @@
  */
 
 #include "button.h"
-#include "FSMPedestrianMode.h"
 
 //BUTTON 1 PROCESS
 int key1_reg0 = NORMAL_STATE;

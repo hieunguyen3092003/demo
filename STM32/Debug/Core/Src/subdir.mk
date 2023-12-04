@@ -11,6 +11,7 @@ C_SRCS += \
 ../Core/Src/FSMPedestrianMode.c \
 ../Core/Src/UART.c \
 ../Core/Src/button.c \
+../Core/Src/buzzer.c \
 ../Core/Src/global.c \
 ../Core/Src/main.c \
 ../Core/Src/scheduler.c \
@@ -28,6 +29,7 @@ OBJS += \
 ./Core/Src/FSMPedestrianMode.o \
 ./Core/Src/UART.o \
 ./Core/Src/button.o \
+./Core/Src/buzzer.o \
 ./Core/Src/global.o \
 ./Core/Src/main.o \
 ./Core/Src/scheduler.o \
@@ -45,6 +47,7 @@ C_DEPS += \
 ./Core/Src/FSMPedestrianMode.d \
 ./Core/Src/UART.d \
 ./Core/Src/button.d \
+./Core/Src/buzzer.d \
 ./Core/Src/global.d \
 ./Core/Src/main.d \
 ./Core/Src/scheduler.d \
