@@ -1,0 +1,3 @@
+FSMPedestrianMode.c:12:6:SetPedDuration	4	static
+FSMPedestrianMode.c:17:6:PedDurationCount	4	static
+FSMPedestrianMode.c:25:6:FSMPedestrianRun	8	static

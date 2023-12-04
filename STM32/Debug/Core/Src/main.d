@@ -23,12 +23,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/button.h ../Core/Inc/main.h ../Core/Inc/global.h \
- ../Core/Inc/softwareTimer.h ../Core/Inc/button.h \
- ../Core/Inc/FSMModificationMode.h ../Core/Inc/global.h \
- ../Core/Inc/UART.h ../Core/Inc/softwareTimer.h \
- ../Core/Inc/FSMNormalMode.h ../Core/Inc/FSMModificationMode.h \
- ../Core/Inc/FSMLightModification.h ../Core/Inc/scheduler.h
+ ../Core/Inc/global.h ../Core/Inc/button.h ../Core/Inc/main.h \
+ ../Core/Inc/FSMLightModification.h ../Core/Inc/global.h \
+ ../Core/Inc/FSMModificationMode.h ../Core/Inc/FSMNormalMode.h \
+ ../Core/Inc/FSMPedestrianMode.h ../Core/Inc/scheduler.h \
+ ../Core/Inc/softwareTimer.h ../Core/Inc/UART.h
 
 ../Core/Inc/main.h:
 
@@ -80,28 +79,24 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
+../Core/Inc/global.h:
+
 ../Core/Inc/button.h:
 
 ../Core/Inc/main.h:
 
+../Core/Inc/FSMLightModification.h:
+
 ../Core/Inc/global.h:
-
-../Core/Inc/softwareTimer.h:
-
-../Core/Inc/button.h:
 
 ../Core/Inc/FSMModificationMode.h:
-
-../Core/Inc/global.h:
-
-../Core/Inc/UART.h:
-
-../Core/Inc/softwareTimer.h:
 
 ../Core/Inc/FSMNormalMode.h:
 
-../Core/Inc/FSMModificationMode.h:
-
-../Core/Inc/FSMLightModification.h:
+../Core/Inc/FSMPedestrianMode.h:
 
 ../Core/Inc/scheduler.h:
+
+../Core/Inc/softwareTimer.h:
+
+../Core/Inc/UART.h:

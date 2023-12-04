@@ -7,7 +7,6 @@
 
 #include "global.h"
 
-int count = 0;
 
 int status = 0;
 int red_time = 5;
@@ -47,7 +46,28 @@ void setTrafficYellow1()
 	HAL_GPIO_WritePin(LIGHT4_GPIO_Port, LIGHT4_Pin, RESET);
 	HAL_GPIO_WritePin(LIGHT5_GPIO_Port, LIGHT5_Pin, RESET);
 }
-
+// PED CONTROL
+void setPedLightRed()
+{
+	HAL_GPIO_WritePin(PED_LIGHT1_GPIO_Port, PED_LIGHT1_Pin, RESET);
+	HAL_GPIO_WritePin(PED_LIGHT2_GPIO_Port, PED_LIGHT2_Pin, SET);
+}
+void setPedLightYellow()
+{
+	HAL_GPIO_WritePin(PED_LIGHT1_GPIO_Port, PED_LIGHT1_Pin, RESET);
+	HAL_GPIO_WritePin(PED_LIGHT2_GPIO_Port, PED_LIGHT2_Pin, RESET);
+}
+void setPedLightGreen()
+{
+	HAL_GPIO_WritePin(PED_LIGHT1_GPIO_Port, PED_LIGHT1_Pin, SET);
+	HAL_GPIO_WritePin(PED_LIGHT2_GPIO_Port, PED_LIGHT2_Pin, RESET);
+}
+void setPedLightOff()
+{
+	HAL_GPIO_WritePin(PED_LIGHT1_GPIO_Port, PED_LIGHT1_Pin, SET);
+	HAL_GPIO_WritePin(PED_LIGHT2_GPIO_Port, PED_LIGHT2_Pin, SET);
+}
+// toggle control
 void toggleTrafficRed()
 {
 	HAL_GPIO_TogglePin(LIGHT2_GPIO_Port, LIGHT2_Pin);
@@ -100,7 +120,6 @@ void updateLedBuffer()
 
 void resetInitialState()
 {
-	count = 0;
 	HAL_GPIO_WritePin(GPIOB, PED_LIGHT1_Pin|LIGHT3_Pin|LIGHT4_Pin|LIGHT5_Pin, SET);
 	HAL_GPIO_WritePin(GPIOA, PED_LIGHT2_Pin|LIGHT2_Pin, SET);
 
@@ -112,6 +131,6 @@ void resetInitialState()
 	isButton1Pressed(); // delete all button_flag
 	isButton2Pressed();
 	isButton3Pressed();
-
+	isButton4Pressed();
 }
 

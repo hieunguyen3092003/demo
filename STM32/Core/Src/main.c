@@ -22,13 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "button.h"
 #include "global.h"
-#include "softwareTimer.h"
-#include "FSMNormalMode.h"
-#include "FSMModificationMode.h"
-#include "FSMLightModification.h"
-#include "scheduler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -105,11 +99,13 @@ int main(void)
   status = NORMAL_MODE;
   SCH_Add_Task(timerRun, 0, 10); 	// setflag function
   SCH_Add_Task(getKeyInput, 0, 10);	// read button flag function every 10 ms
+  SCH_Add_Task(PedDurationCount, 0, 1000); // countdown 2 period to turn off ped light
   while (1)
   {
 	  FSMNormalModeRun();
 	  FSMModificationModeRun();
 	  FSMLightModification();
+	  FSMPedestrianRun();
 	  SCH_Dispatch_Tasks();
 
     /* USER CODE END WHILE */

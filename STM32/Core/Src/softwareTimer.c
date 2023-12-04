@@ -10,12 +10,36 @@
 
 int timer1_counter = 0;
 int timer1_flag = 0;
-// counter for trafic light (already multiple for 100)
-void setTimer1(int duration)
+void setTimer1(int duration) // THIS TIMER ONLY USE FOR SET FLAG TRAFFICLIGHT (already multiple for 100)
 {
 	timer1_counter = duration*100;
 	timer1_flag = 0;
 }
+
+int timer2_counter = 0;
+int timer2_flag = 0;
+void setTimer2(int duration2)
+{
+	timer2_counter = duration2;
+	timer2_flag = 0;
+}
+
+int timer3_counter = 0;
+int timer3_flag = 0;
+void setTimer3(int duration3) // THIS TIMER ONLY USE FOR SET FLAG TRAFFICLIGHT
+{
+	timer3_counter = duration3;
+	timer3_flag = 0;
+}
+
+int timer4_counter = 0;
+int timer4_flag = 0;
+void setTimer4(int duration4)
+{
+	timer4_counter = duration4;
+	timer4_flag = 0;
+}
+
 
 void timerRun()
 {
@@ -60,31 +84,4 @@ void timerRun()
 
 }
 
-// counter for 7 led segment
-int timer2_counter = 0;
-int timer2_flag = 0;
 
-void setTimer2(int duration2)
-{
-	timer2_counter = duration2;
-	timer2_flag = 0;
-}
-
-int timer3_counter = 0;
-int timer3_flag = 0;
-
-void setTimer3(int duration3)
-{
-	timer3_counter = duration3;
-	timer3_flag = 0;
-}
-
-
-int timer4_counter = 0;
-int timer4_flag = 0;
-
-void setTimer4(int duration4)
-{
-	timer4_counter = duration4;
-	timer4_flag = 0;
-}

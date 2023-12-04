@@ -8,10 +8,14 @@
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
-#include "main.h"
-#include "softwareTimer.h"
 #include "button.h"
+#include "main.h"
+#include "FSMLightModification.h"
 #include "FSMModificationMode.h"
+#include "FSMNormalMode.h"
+#include "FSMPedestrianMode.h"
+#include "scheduler.h"
+#include "softwareTimer.h"
 #include "UART.h"
 
 //define các trạng thái của máy trạng thái
@@ -55,12 +59,16 @@ void setTrafficRed1();
 void setTrafficGreen1();
 void setTrafficYellow1();
 
+void setPedLightRed();
+void setPedLightYellow();
+void setPedLightGreen();
+void setPedLightOff();
+
 void toggleTrafficRed();
 void toggleTrafficGreen();
 void toggleTrafficYellow();
 
 //INTERACT WITH SEVEN SEG LED FUNCTION
-extern int count;
 const int scan_led_time;
 int led_buffer[4];
 void setLedBuffer(int first_led_time, int second_led_time);

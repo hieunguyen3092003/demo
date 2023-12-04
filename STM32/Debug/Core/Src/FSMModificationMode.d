@@ -1,6 +1,7 @@
 Core/Src/FSMModificationMode.o: ../Core/Src/FSMModificationMode.c \
  ../Core/Inc/FSMModificationMode.h ../Core/Inc/global.h \
- ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ ../Core/Inc/button.h ../Core/Inc/main.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -24,12 +25,15 @@ Core/Src/FSMModificationMode.o: ../Core/Src/FSMModificationMode.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/softwareTimer.h ../Core/Inc/button.h \
- ../Core/Inc/FSMModificationMode.h ../Core/Inc/UART.h
+ ../Core/Inc/FSMLightModification.h ../Core/Inc/FSMModificationMode.h \
+ ../Core/Inc/FSMNormalMode.h ../Core/Inc/FSMPedestrianMode.h \
+ ../Core/Inc/scheduler.h ../Core/Inc/softwareTimer.h ../Core/Inc/UART.h
 
 ../Core/Inc/FSMModificationMode.h:
 
 ../Core/Inc/global.h:
+
+../Core/Inc/button.h:
 
 ../Core/Inc/main.h:
 
@@ -81,10 +85,16 @@ Core/Src/FSMModificationMode.o: ../Core/Src/FSMModificationMode.c \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
-../Core/Inc/softwareTimer.h:
-
-../Core/Inc/button.h:
+../Core/Inc/FSMLightModification.h:
 
 ../Core/Inc/FSMModificationMode.h:
+
+../Core/Inc/FSMNormalMode.h:
+
+../Core/Inc/FSMPedestrianMode.h:
+
+../Core/Inc/scheduler.h:
+
+../Core/Inc/softwareTimer.h:
 
 ../Core/Inc/UART.h:
