@@ -87,7 +87,6 @@ int isButton4Pressed()
 	if(button4_flag == 1)
 	{
 		button4_flag = 0;
-		SetPedDuration(); // turn on PED light
 		return 1;
 	}
 	else return 0;

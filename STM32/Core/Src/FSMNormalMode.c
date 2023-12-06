@@ -20,8 +20,13 @@ void FSMNormalModeRun()
 
 		status = RED0_GREEN1; 	//next mode
 		setTimer1(green_time);	//set timer for next state
-
+		setTimer2(100);
+		timer2_flag = 1;
+		setTimer3(100);
 		setLedBuffer(red_time, green_time);
+
+		// uart
+		UARTSendMode(1);
 		break;
 	case RED0_GREEN1:
 		setTrafficRed();
@@ -31,6 +36,14 @@ void FSMNormalModeRun()
 		{
 			updateLedBuffer();
 			setTimer3(100);
+		}
+
+		//uart
+		if(timer2_flag == 1)
+		{
+			UARTCountdownTrafficTime(1, (led_buffer[0] * 10) + led_buffer[1]);
+			UARTCountdownTrafficTime(2, (led_buffer[2] * 10) + led_buffer[3]);
+			setTimer2(100);
 		}
 
 		if(timer1_flag == 1)
@@ -59,6 +72,14 @@ void FSMNormalModeRun()
 			setTimer3(100);
 		}
 
+		//uart
+		if(timer2_flag == 1)
+		{
+			UARTCountdownTrafficTime(1, (led_buffer[0] * 10) + led_buffer[1]);
+			UARTCountdownTrafficTime(2, (led_buffer[2] * 10) + led_buffer[3]);
+			setTimer2(100);
+		}
+
 		if(timer1_flag == 1)
 		{
 			status = GREEN0_RED1;	//next mode
@@ -85,6 +106,14 @@ void FSMNormalModeRun()
 
 		}
 
+		//uart
+		if(timer2_flag == 1)
+		{
+			UARTCountdownTrafficTime(1, (led_buffer[0] * 10) + led_buffer[1]);
+			UARTCountdownTrafficTime(2, (led_buffer[2] * 10) + led_buffer[3]);
+			setTimer2(100);
+		}
+
 		if(timer1_flag==1)
 		{
 			status = YELLOW0_RED1;
@@ -108,6 +137,14 @@ void FSMNormalModeRun()
 		{
 			updateLedBuffer();
 			setTimer3(100);
+		}
+
+		//uart
+		if(timer2_flag == 1)
+		{
+			UARTCountdownTrafficTime(1, (led_buffer[0] * 10) + led_buffer[1]);
+			UARTCountdownTrafficTime(2, (led_buffer[2] * 10) + led_buffer[3]);
+			setTimer2(100);
 		}
 
 		if(timer1_flag == 1)

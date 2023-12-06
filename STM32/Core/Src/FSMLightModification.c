@@ -24,6 +24,9 @@ void FSMLightModification()
 
 			red_time++;
 			setLedBuffer(red_time, 1);
+
+			//uart
+			UARTSendBufferRed(red_time);
 		}
 
 		if(isButton3Pressed() == 1)
@@ -34,6 +37,9 @@ void FSMLightModification()
 			setTimer4(25);
 
 			setLedBuffer(0, 2);
+
+			//uart
+			UARTSendBufferYellow(0);
 		}
 		break;
 
@@ -50,6 +56,9 @@ void FSMLightModification()
 
 			yellow_time++;
 			setLedBuffer(yellow_time, 2);
+
+			//uart
+			UARTSendBufferYellow(yellow_time);
 		}
 
 		if(isButton3Pressed() == 1)
@@ -60,6 +69,9 @@ void FSMLightModification()
 			setTimer4(25);
 
 			setLedBuffer(0, 3);
+
+			//uart
+			UARTSendBufferGreen(0);
 		}
 		break;
 
@@ -77,6 +89,9 @@ void FSMLightModification()
 
 			green_time++;
 			setLedBuffer(green_time, 3);
+
+			//uart
+			UARTSendBufferGreen(green_time);
 		}
 
 		if(isButton3Pressed() == 1)

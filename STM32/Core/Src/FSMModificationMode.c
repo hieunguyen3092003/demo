@@ -13,12 +13,20 @@ void FSMModificationModeRun()
 	{
 	case MODIFICATION_MODE:
 		resetInitialState();	// reset all all the varialbles thats affect FSMModificationModeRun
+
+		UARTSendMode(2);
+
 		status = MODIFY_RED;	// next mode
+
 		//led blinky for 2hz
 		setTimer4(25);
+
 		// initial setting led 7 seg
 		setLedBuffer(0, 1);
 
+		//uart
+		UARTSendMode(2);
+		UARTSendBufferRed(0);
 
 		break;
 
@@ -39,6 +47,9 @@ void FSMModificationModeRun()
 
 			// initial setting led 7 seg
 			setLedBuffer(0, 2);
+
+			//uart
+			UARTSendBufferYellow(0);
 		}
 
 		if(isButton2Pressed() == 1)
@@ -50,6 +61,9 @@ void FSMModificationModeRun()
 
 			red_time = 1;
 			setLedBuffer(red_time, 1);
+
+			//uart
+			UARTSendBufferRed(red_time);
 		}
 		break;
 
@@ -70,7 +84,9 @@ void FSMModificationModeRun()
 			setTimer4(25);
 
 			setLedBuffer(0, 3);
-//			SCH_Add_Task(toggleTrafficGreen, 0, TOGGLE_TIME);
+
+			//uart
+			UARTSendBufferGreen(0);
 		}
 
 		if(isButton2Pressed() == 1)
@@ -82,6 +98,9 @@ void FSMModificationModeRun()
 
 			yellow_time = 1;
 			setLedBuffer(yellow_time, 2);
+
+			//uart
+			UARTSendBufferYellow(yellow_time);
 
 		}
 		break;
@@ -124,6 +143,9 @@ void FSMModificationModeRun()
 			status = MODIFY_TIME_GREEN;
 			green_time = 1;
 			setLedBuffer(green_time, 3);
+
+			//uart
+			UARTSendBufferGreen(green_time);
 		}
 		break;
 

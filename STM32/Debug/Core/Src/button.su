@@ -4,6 +4,6 @@ button.c:55:5:isButton2Pressed	4	static
 button.c:64:6:flag2Process	4	static
 button.c:70:5:isButton3Pressed	4	static
 button.c:79:6:flag3Process	4	static
-button.c:85:5:isButton4Pressed	8	static
-button.c:95:6:flag4Process	4	static
-button.c:101:6:getKeyInput	8	static
+button.c:85:5:isButton4Pressed	4	static
+button.c:94:6:flag4Process	4	static
+button.c:100:6:getKeyInput	8	static

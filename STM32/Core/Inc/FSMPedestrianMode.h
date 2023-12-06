@@ -11,7 +11,6 @@
 #include "global.h"
 
 #define PED_LIGHT_DURATION		2
-void SetPedDuration();
 void PedDurationCount();
 
 #endif /* INC_FSMPEDESTRIANMODE_H_ */

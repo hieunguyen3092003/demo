@@ -30,7 +30,12 @@ void FSMPedestrianRun()
 		resetInitialState();
 		break;
 	case RED0_GREEN1:
-		if(isButton4Pressed() || PED_PRESSED > 0)
+		if(isButton4Pressed())
+		{
+			SetPedDuration(); // turn on PED light
+		}
+
+		if(PED_PRESSED > 0)
 		{
 			setPedLightRed();
 		}
@@ -40,7 +45,12 @@ void FSMPedestrianRun()
 		}
 		break;
 	case RED0_YELLOW1:
-		if(isButton4Pressed() || PED_PRESSED > 0)
+		if(isButton4Pressed())
+		{
+			SetPedDuration(); // turn on PED light
+		}
+
+		if(PED_PRESSED > 0)
 		{
 			setPedLightRed();
 		}
@@ -50,7 +60,12 @@ void FSMPedestrianRun()
 		}
 		break;
 	case GREEN0_RED1:
-		if(isButton4Pressed() || PED_PRESSED > 0)
+		if(isButton4Pressed())
+		{
+			SetPedDuration(); // turn on PED light
+		}
+
+		if(PED_PRESSED > 0)
 		{
 			setPedLightGreen();
 		}
@@ -60,9 +75,14 @@ void FSMPedestrianRun()
 		}
 		break;
 	case YELLOW0_RED1:
-		if(isButton4Pressed() || PED_PRESSED > 0)
+		if(isButton4Pressed())
 		{
-			setPedLightGreen();
+			SetPedDuration(); // turn on PED light
+		}
+
+		if(PED_PRESSED > 0)
+		{
+			setPedLightYellow();
 		}
 		else
 		{
